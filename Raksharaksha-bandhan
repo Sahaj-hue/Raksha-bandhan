@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan - From Sahaj</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffefd5, #ffe4b5);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #d2691e;
+            color: white;
+            padding: 20px;
+            font-size: 1.8rem;
+        }
+        .message {
+            padding: 30px;
+            font-size: 1.2rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .form-section {
+            background-color: #fff3e0;
+            padding: 20px;
+            border-top: 2px solid #d2691e;
+        }
+        input, textarea, button {
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a0522d;
+        }
+        footer {
+            background-color: #d2691e;
+            color: white;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>🌸 Happy Raksha Bandhan 🌸<br>From Sahaj</header>
+
+    <div class="message">
+        <p>Raksha Bandhan celebrates the beautiful bond between brothers and sisters.  
+        This Rakhi, let’s cherish love, care, and the promise to protect each other forever. 💖</p>
+    </div>
+
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rakhi_in_India.jpg" alt="Rakhi">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Raksha_Bandhan_Celebration.jpg" alt="Siblings">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Rakhi.jpg" alt="Rakhi Thread">
+    </div>
+
+    <div class="form-section">
+        <h2>Send Your Rakhi Wishes 🎁</h2>
+        <form id="wishForm">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <textarea id="wish" placeholder="Write your wish..." required></textarea><br>
+            <button type="submit">Send Wish</button>
+        </form>
+        <p id="responseMessage" style="color:green; font-weight:bold;"></p>
+    </div>
+
+    <footer>
+        &copy; 2025 Raksha Bandhan | From Sahaj ❤️
+    </footer>
+
+    <script>
+        document.getElementById('wishForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const wish = document.getElementById('wish').value.trim();
+
+            if(name && wish) {
+                document.getElementById('responseMessage').innerText = `Thank you, ${name}! Your wish has been sent.`;
+                document.getElementById('wishForm').reset();
+            }
+        });
+    </script>
+
+</body>
+</html>
